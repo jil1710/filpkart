@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    position: relative;
+    color: white;
+}
+
+header .nav__bar{
+    background-color: #2874f0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .nav__bar .site__logo .logo__text img{
+    display: flex;
+}
+header .nav__bar .wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+header .nav__bar .explore__logo img{
+    width: min(10%,10px);
+}
+header .nav__bar .explore__logo{
+    margin-top: -4px;
+
+}
+header .nav__bar .explore__logo span{
+    font-family: 'Barlow', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: white;
+    font-size: 11px;
+}
+header .nav__bar .explore__logo::before{
+    content: 'Explore';
+    font-family: 'Barlow', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    color: white;
+    font-size: 11px;
+}
+.login__btn{
+    font-size:16px;padding: 8px 20px;background-color: white;color: #2874f0;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 140px;
+}
+header .nav__bar .__links{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+header .nav__bar .__links li:nth-child(3):hover .fa {
+    transform: rotate(-180deg);
+    transition: 0.5s ease;
+}
+
+header .nav__bar .wrap .search__bar{
+    width: 25vw;
+    position: relative;
+}
+header .nav__bar .wrap .search__bar .search{
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    display: block;
+    color: #2874f0;
+    font-weight: bolder;
+}
+header .nav__bar .wrap .search__bar input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+}
+.drop__down{
+    position: absolute;
+    width: 300px;
+    top: 65px;
+    height: 0;
+    transition: height .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    right: 0.1rem;
+    overflow: hidden;
+    background-color: rgba(218, 217, 219, 0.247);
+    border-radius: 4px;
+    backdrop-filter: blur(15px);
+    box-shadow: 1px 1px 9px -1px rgb(175, 175, 175);
+}
+.drop__down.open{
+    height: 216px;
+}
+.drop__down li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    display: block;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+
+}
+.bar{
+    display: none;
+}
+header .drop__down li:nth-child(2):hover .fa {
+    transform: rotate(-180deg);
+    transition: 0.5s ease;
+}
+.drop__down li:hover{
+    color: #2874f0;
+    cursor: pointer;
+}
+
+.drop__down .login__btn{
+    background-color: #2874f0;
+    color: white;
+    width: 100%;
+
+}
+
+
+/* Media query */
+@media (max-width:999px) {
+    .nav__bar .__links{
+        display: none !important;
+    }
+    .nav__bar .search__bar {
+        width: 55vw !important;
+    }
+    ::placeholder{
+        font-size: 13px;
+    }
+    .nav__bar .bar{display: block;}
+}
+@media (max-width:500px){
+    .nav__bar .search__bar {
+        width: 45vw !important;
+    }
+    
+    .drop__down{
+        left: 1rem;
+        right: 1rem;
+        width: unset;
+    }
+}
