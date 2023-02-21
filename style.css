@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
-header{
+
+header {
     position: relative;
     color: white;
 }
 
-header .nav__bar{
+header .nav__bar {
     background-color: #2874f0;
     width: 100%;
     height: 60px;
@@ -20,31 +21,35 @@ header .nav__bar{
     align-items: center;
 }
 
-header .nav__bar .site__logo .logo__text img{
+header .nav__bar .site__logo .logo__text img {
     display: flex;
 }
-header .nav__bar .wrap{
+
+header .nav__bar .wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-header .nav__bar .explore__logo img{
-    width: min(10%,10px);
+header .nav__bar .explore__logo img {
+    width: min(10%, 10px);
 }
-header .nav__bar .explore__logo{
+
+header .nav__bar .explore__logo {
     margin-top: -4px;
 
 }
-header .nav__bar .explore__logo span{
+
+header .nav__bar .explore__logo span {
     font-family: 'Barlow', sans-serif;
     font-style: italic;
     font-weight: bolder;
     color: white;
     font-size: 11px;
 }
-header .nav__bar .explore__logo::before{
+
+header .nav__bar .explore__logo::before {
     content: 'Explore';
     font-family: 'Barlow', sans-serif;
     font-style: italic;
@@ -52,32 +57,39 @@ header .nav__bar .explore__logo::before{
     color: white;
     font-size: 11px;
 }
-.login__btn{
-    font-size:16px;padding: 8px 20px;background-color: white;color: #2874f0;
+
+.login__btn {
+    font-size: 16px;
+    padding: 8px 20px;
+    background-color: white;
+    color: #2874f0;
     outline: none;
     border: none;
     border-radius: 3px;
     width: 140px;
 }
-header .nav__bar .__links{
+
+header .nav__bar .__links {
     list-style: none;
     display: flex;
     gap: 3rem;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 0;
     font-weight: 500;
 }
 
-header .nav__bar .__links li:nth-child(3):hover .fa {
+header .nav__bar .__links li.more:nth-child(3):hover .fa-chevron-down {
     transform: rotate(-180deg);
     transition: 0.5s ease;
 }
 
-header .nav__bar .wrap .search__bar{
+header .nav__bar .wrap .search__bar {
     width: 25vw;
     position: relative;
 }
-header .nav__bar .wrap .search__bar .search{
+
+header .nav__bar .wrap .search__bar .search {
     position: absolute;
     top: 30%;
     right: 5%;
@@ -85,7 +97,8 @@ header .nav__bar .wrap .search__bar .search{
     color: #2874f0;
     font-weight: bolder;
 }
-header .nav__bar .wrap .search__bar input{
+
+header .nav__bar .wrap .search__bar input {
     width: 100%;
     height: 40px;
     outline: none;
@@ -93,22 +106,27 @@ header .nav__bar .wrap .search__bar input{
     border-radius: 3px;
     padding: 10px;
 }
-.drop__down{
+.dropdown-toggle::after {
+    content: none;
+}
+
+.drop__down {
     position: absolute;
     width: 300px;
     top: 65px;
+    margin-bottom: 0;
     height: 0;
+    padding: 0;
     transition: height .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     right: 0.1rem;
     overflow: hidden;
-    background-color: rgba(218, 217, 219, 0.247);
+    background-color: white;
     border-radius: 4px;
+    z-index: 10000;
     backdrop-filter: blur(15px);
     box-shadow: 1px 1px 9px -1px rgb(175, 175, 175);
 }
-.drop__down.open{
-    height: 216px;
-}
+
 .drop__down li {
     display: flex;
     justify-content: center;
@@ -121,45 +139,136 @@ header .nav__bar .wrap .search__bar input{
     font-weight: 500;
 
 }
-.bar{
+
+.bar {
     display: none;
 }
+
 header .drop__down li:nth-child(2):hover .fa {
     transform: rotate(-180deg);
     transition: 0.5s ease;
 }
-.drop__down li:hover{
+
+.drop__down li:hover {
     color: #2874f0;
     cursor: pointer;
 }
 
-.drop__down .login__btn{
+.drop__down .login__btn {
     background-color: #2874f0;
     color: white;
     width: 100%;
 
 }
 
+.__product {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 2px 1px rgb(201, 201, 201);
+}
+
+.product {
+    width: 70%;
+}
+
+.main {
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.__carousal {
+    width: 90%;
+}
+
+.swiper {
+    width: max(1680px, 100%);
+    height: 300px;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0px;
+}
+.carousel-control-next, .carousel-control-prev{
+    opacity: 1;
+}
+
+.slider-btn {
+    position: absolute;
+    background-color: white !important;
+    width: 2.5vw !important;
+    height: 6.5vw !important;
+    top: 25%;
+    left: 0;
+}
+.slider-btn1 {
+    position: absolute;
+    background-color: white !important;
+    width: 2.5vw !important;
+    height: 6.5vw !important;
+    top: 25%;
+    right: 0;
+}
 
 /* Media query */
 @media (max-width:999px) {
-    .nav__bar .__links{
+    .drop__down.open {
+        height: 235px;
+    }
+    .mobile{
+        height: 150px;
+    }
+    .nav__bar .__links {
         display: none !important;
     }
+
     .nav__bar .search__bar {
         width: 55vw !important;
     }
-    ::placeholder{
+
+    ::placeholder {
         font-size: 13px;
     }
-    .nav__bar .bar{display: block;}
+
+    .nav__bar .bar {
+        display: block;
+    }
+
+    .product {
+        overflow-x: scroll;
+        width: 95%;
+        box-shadow: 0px 0px 0px 0px white;
+    }
 }
-@media (max-width:500px){
+
+@media (max-width:500px) {
     .nav__bar .search__bar {
         width: 45vw !important;
     }
-    
-    .drop__down{
+
+    .product {
+        overflow-x: scroll;
+        width: 95%;
+        box-shadow: 0px 0px 0px 0px white;
+    }
+    .mobile{
+        height: 200px;
+    }
+    .slider-btn{
+        top:40%
+    }
+    .slider-btn1{
+        top:40%
+    }
+
+    .drop__down {
         left: 1rem;
         right: 1rem;
         width: unset;
