@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Roboto&display=swap');
 
 * {
     margin: 0;
@@ -106,6 +107,7 @@ header .nav__bar .wrap .search__bar input {
     border-radius: 3px;
     padding: 10px;
 }
+
 .dropdown-toggle::after {
     content: none;
 }
@@ -175,7 +177,7 @@ header .drop__down li:nth-child(2):hover .fa {
 }
 
 .main {
-    height: 100vh;
+    height: 100%;
     background-color: #f0f0f0;
     padding: 10px;
 }
@@ -184,9 +186,17 @@ header .drop__down li:nth-child(2):hover .fa {
     width: 90%;
 }
 
+.list__product {
+    width: 75%;
+}
+
+.list___product {
+    width: 90%;
+}
+
 .swiper {
-    width: max(1680px, 100%);
-    height: 300px;
+    width: 100%;
+    height: 350px;
 }
 
 .swiper-button-prev {
@@ -196,7 +206,9 @@ header .drop__down li:nth-child(2):hover .fa {
 .swiper-button-next {
     right: 0px;
 }
-.carousel-control-next, .carousel-control-prev{
+
+.carousel-control-next,
+.carousel-control-prev {
     opacity: 1;
 }
 
@@ -208,6 +220,7 @@ header .drop__down li:nth-child(2):hover .fa {
     top: 25%;
     left: 0;
 }
+
 .slider-btn1 {
     position: absolute;
     background-color: white !important;
@@ -217,14 +230,29 @@ header .drop__down li:nth-child(2):hover .fa {
     right: 0;
 }
 
+.festival {
+    width: 15%;
+    background-image: url('https://rukminim1.flixcart.com/fk-p-flap/278/278/image/fb57b447c8eefb65.jpg?q=90');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 /* Media query */
 @media (max-width:999px) {
     .drop__down.open {
         height: 235px;
     }
-    .mobile{
+    .festival{
+        display: none !important;
+    }
+    .list__product{
+        width: 90%;
+    }
+    .mobile {
         height: 150px;
     }
+
     .nav__bar .__links {
         display: none !important;
     }
@@ -252,21 +280,40 @@ header .drop__down li:nth-child(2):hover .fa {
     .nav__bar .search__bar {
         width: 45vw !important;
     }
-
+    .festival{
+        display: none !important;
+    }
+    .list__product{
+        width: 90%;
+    }
     .product {
         overflow-x: scroll;
         width: 95%;
         box-shadow: 0px 0px 0px 0px white;
     }
-    .mobile{
+
+    .mobile {
         height: 200px;
     }
-    .slider-btn{
-        top:40%
+
+    .slider-btn {
+        top: 40%
     }
-    .slider-btn1{
-        top:40%
+
+    .slider-btn1 {
+        top: 40%
     }
+
+    .small-layout h4,
+    .small-layout span {
+        font-size: 15px;
+    }
+
+    .view {
+        display: none;
+        width: 0%;
+    }
+
 
     .drop__down {
         left: 1rem;
