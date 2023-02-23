@@ -48,7 +48,7 @@
                         More <i class="fa fa-chevron-down" style="font-size: 9px;margin-left:3px"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                        <li><a class="dropdown-item active" href="#"><i class="fa fa-bell mx-3"></i>Notification
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-bell mx-3"></i>Notification
                                 Preference</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa fa-question mx-3"></i> 24/7 Customer Care</a>
                         </li>
@@ -65,9 +65,23 @@
                 <i class="fa fa-bars"></i>
             </div>
         </nav>
-        <ul class="drop__down">
+        <ul class="drop__down" style="overflow-y: scroll;">
             <li>Become a Seller</li>
-            <li>More <i class="fa fa-chevron-down" style="font-size: 9px;"></i></li>
+            <li class="more dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More <i class="fa fa-chevron-down" style="font-size: 9px;margin-left:3px"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" style="font-size: 15px;" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" href="#"><i class="fa fa-bell mx-3"></i>Notification
+                        Preference</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-question mx-3"></i> 24/7 Customer Care</a>
+                </li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-chart-line mx-3"></i> Advertise</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-arrows-down-to-line mx-3"></i> Download
+                        App</a></li>
+            </ul>
+
+        </li>
             <li><i class="fa fa-cart-shopping"></i> Cart</li>
             <li><button class="login__btn" style="cursor: pointer;font-weight: bold;">Login</button></li>
         </ul>
@@ -222,7 +236,7 @@
                     </div>
                 </div>
                 <!--  -->
-
+                
                 <div class="slide-container swiper" style="overflow: hidden;">
                     <div class="slide-content py-3">
                         <div class="swiper-wrapper">
@@ -356,7 +370,7 @@
                 <!--  -->
 
                 <div class="slide-container swiper" style="overflow: hidden;">
-                    <div class="slide-content py-3">
+                    <div class="slide-content1 py-3">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div>
@@ -493,7 +507,7 @@
                 </ul>
                 <p class="text-center text-white">&copy;
                     <script>document.write(new Date().getFullYear());</script> Flipkart, Inc | Developed by <a
-                        href="#" class="nav-link d-inline-block text-warning">Jil
+                        href="https://github.com/jil1710/filpkart" class="nav-link d-inline-block text-warning">Jil
                         Patel</a>
                 </p>
             </footer>

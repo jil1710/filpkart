@@ -31,7 +31,7 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
-var swiper = new Swiper(".slide-content", {
+var swiper = new Swiper(".slide-content1", {
     slidesPerView: 6,
     spaceBetween: 10,
     loop: true,
@@ -64,6 +64,9 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
+
+
+
 
 var countDate = new Date("March 3, 2023 15:37:25").getTime();
 
