@@ -214,6 +214,7 @@ header .drop__down li:nth-child(2):hover .fa {
     opacity: 1;
 }
 
+
 .slider-btn {
     position: absolute;
     background-color: white !important;
@@ -240,7 +241,7 @@ header .drop__down li:nth-child(2):hover .fa {
     background-size: contain;
 }
 
-/* Media query */
+/* Media query for responsive of webpages */
 @media (max-width:999px) {
     .drop__down.open {
         height: 235px;

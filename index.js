@@ -1,3 +1,4 @@
+// Swiper is a constructor to slide the content inside the particular container
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 6,
     spaceBetween: 10,
@@ -31,6 +32,7 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
+
 var swiper = new Swiper(".slide-content1", {
     slidesPerView: 6,
     spaceBetween: 10,
@@ -67,15 +69,15 @@ var swiper = new Swiper(".slide-content1", {
 
 
 
-
-var countDate = new Date("March 3, 2023 15:37:25").getTime();
+// Count down for expiration of product deal
+var countDate = new Date("Feb 23, 2023 16:06:25").getTime();
 
 var x = setInterval(function() {
 
   var now = new Date().getTime();
 
   var distance = countDate - now;
-
+    
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -92,7 +94,10 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+// End of Logic for count down
 
+
+// Login for making navigation header responsive in different screens
 const toggleBtn = document.querySelector('.bar');
 const toggleIcon = document.querySelector('.bar i');
 const drop_down = document.querySelector('.drop__down');
