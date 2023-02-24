@@ -6,15 +6,15 @@ var swiper = new Swiper(".slide-content", {
     fade: 'true',
     grabCursor: 'true',
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 
-    breakpoints:{
+    breakpoints: {
         0: {
             slidesPerView: 1,
         },
-        550:{
+        550: {
             slidesPerView: 2,
 
         },
@@ -31,7 +31,7 @@ var swiper = new Swiper(".slide-content", {
             slidesPerView: 6,
         },
     },
-  });
+});
 
 var swiper = new Swiper(".slide-content1", {
     slidesPerView: 6,
@@ -40,15 +40,15 @@ var swiper = new Swiper(".slide-content1", {
     fade: 'true',
     grabCursor: 'true',
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 
-    breakpoints:{
+    breakpoints: {
         0: {
             slidesPerView: 1,
         },
-        550:{
+        550: {
             slidesPerView: 2,
 
         },
@@ -65,33 +65,33 @@ var swiper = new Swiper(".slide-content1", {
             slidesPerView: 6,
         },
     },
-  });
+});
 
 
 
 // Count down for expiration of product deal
-var countDate = new Date("Feb 23, 2023 16:06:25").getTime();
+var countDate = new Date("Feb 24, 2023 11:27:25").getTime();
 
-var x = setInterval(function() {
+var x = setInterval(function () {
 
-  var now = new Date().getTime();
+    var now = new Date().getTime();
 
-  var distance = countDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    var distance = countDate - now;
 
-  document.getElementById("datetime").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s Left";
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("datetime").innerHTML = "EXPIRED";
-  }
+    document.getElementById("datetime").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s Left";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("datetime").innerHTML = "EXPIRED";
+    }
 }, 1000);
 
 // End of Logic for count down
@@ -101,11 +101,27 @@ var x = setInterval(function() {
 const toggleBtn = document.querySelector('.bar');
 const toggleIcon = document.querySelector('.bar i');
 const drop_down = document.querySelector('.drop__down');
+const vi = document.querySelector('#viewALL');
 
-toggleBtn.onclick = function(){
+// $('[data-bs-toggle="tooltip"]').tooltip();
+function viewALL(view){
+    if(view.matches){
+        vi.innerHTML = "<i class='fa fa-border-all'></i>"
+    }
+    else{
+        vi.innerHTML = "View ALL"
+
+    }
+}
+
+var media = window.matchMedia("(max-width:634px)");
+viewALL(media)
+media.addListener(viewALL)
+toggleBtn.onclick = function () {
     drop_down.classList.toggle('open');
     const isOpen = drop_down.classList.contains('open')
-
+    
     toggleIcon.classList = isOpen ? 'fa fa-xmark' : 'fa fa-bars'
 }
 
+viewALL();

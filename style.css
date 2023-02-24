@@ -312,10 +312,6 @@ header .drop__down li:nth-child(2):hover .fa {
         font-size: 15px;
     }
 
-    .view {
-        display: none;
-        width: 0%;
-    }
 
 
     .drop__down {
